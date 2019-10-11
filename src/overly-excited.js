@@ -12,8 +12,22 @@ function addExcitement (theWordArray) {
     let buildMeUp = ""
 
     for (let i = 0; i < theWordArray.length; i++) {
+        /*
+            If the current word's place (not index) in the array
+            is evenly divisible by 3, add an exclamation point
+            to the end of the word and then concatenate it to
+            `buildMeUp`.
+
+            Otherwise, just concatenate the word itself.
+         */
         // Concatenate the new word onto buildMeUp
-        buildMeUp += `${theWordArray[i]} `;
+        if ((i + 1) % 3 === 0){
+            // console.log(i, 'divisible by 3'); // tested for correct position logic in line above
+            buildMeUp += `${theWordArray[i]}! `
+        }
+        else {
+            buildMeUp += `${theWordArray[i]} `;
+        }
         // Print buildMeUp to the console
         console.log(buildMeUp);
     }
