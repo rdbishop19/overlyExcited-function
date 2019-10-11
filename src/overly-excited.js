@@ -1,10 +1,9 @@
 // Create an array that contains the words in the sentence
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
-   function addExcitement (theWordArray, string="!", repeat=1) {
+   function addExcitement (theWordArray, string="!", repeat=1, position=3) {
     /* 
-    Add a new argument to the function so that a developer can specify 
-    how many times the special character should be added.
+    Added position argument to deterimine where the punctuation string gets added
     */
        
     // Each time the for loop executes, you're going to add one more word to this string
@@ -15,7 +14,7 @@ let sentence = ["The","walrus","danced","through","the","trees","in","the","ligh
     }
     for (let i = 0; i < theWordArray.length; i++) {
         // Concatenate the new word onto buildMeUp
-        if ((i + 1) % 3 === 0){
+        if ((i + 1) % position === 0){
             buildMeUp += `${theWordArray[i]}${repeatChar} `;
         }
         else {
@@ -34,4 +33,9 @@ let sentence = ["The","walrus","danced","through","the","trees","in","the","ligh
 // addExcitement(sentence, "?") // second argument declared, will use instead of default "!"
 
 // I want to use a 4 asterisks
+// addExcitement(sentence, "*", 4);
+
+// I want to specify at what position the added punctuation is input
 addExcitement(sentence, "*", 4);
+addExcitement(sentence, "*", 4, 2);
+addExcitement(sentence, "*", 2, 1);
