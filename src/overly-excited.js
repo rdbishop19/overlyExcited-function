@@ -1,9 +1,9 @@
 // Create an array that contains the words in the sentence
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
-   function addExcitement (theWordArray, string="!", repeat=1, position=3) {
+const addExcitement = (theWordArray, string="!", repeat=1, position=3) => {
     /* 
-    Added position argument to deterimine where the punctuation string gets added
+    Rewrite as arrow function
     */
        
     // Each time the for loop executes, you're going to add one more word to this string
